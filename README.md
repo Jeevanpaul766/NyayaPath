@@ -89,6 +89,8 @@ NyayaPath is an agentic AI system that accepts a citizen's natural-language acco
 
 ## 🏗️ System Architecture
 
+![NyayaPath Agentic Pipeline Architecture](docs/screenshots/nyayapath_architecture.png)
+
 ```
                        User Free-Text Narrative
                                   │
@@ -147,6 +149,9 @@ Feedback  │                       ▼
 ## 📐 Key Technical Achievements
 
 ### 1. The Section 482 Collision Problem
+
+![The Section 482 Collision](docs/screenshots/section_482_collision.png)
+
 When India replaced its colonial criminal statutes on 1 July 2024, section numbers were reassigned without continuity. Most dangerously:
 - **CrPC Section 482** = **Inherent powers of the High Court** (used to quash malicious FIRs).
 - **BNSS Section 482** = **Anticipatory Bail** (formerly CrPC Section 438).
@@ -154,6 +159,9 @@ When India replaced its colonial criminal statutes on 1 July 2024, section numbe
 Conflating these provisions could cause someone seeking bail to file a petition in the High Court for quashing (or vice versa). NyayaPath partitions substantive law based strictly on the **date of offence** (Article 20(1) ex-post facto constitutional principle) so that BNS/BNSS queries never retrieve CrPC 482 for quashing or IPC 498A for cruelty without explicit cross-regime translation.
 
 ### 2. Why Local Hybrid RAG Was Preferred Over Pure Tavily
+
+![Naive RAG vs Agentic Hybrid RAG](docs/screenshots/naive_rag_pipeline.png)
+
 Statutory bare acts are authoritative, dense, and structured: exact section numbers, definitions, and punishments must come from authentic primary legal sources rather than SEO-driven law firm blogs.
 - **Dense Vector Search**: ChromaDB (`all-MiniLM-L6-v2`) captures conceptual semantic intent (e.g. mapping matrimonial cruelty to BNS 85 / IPC 498A).
 - **Sparse Lexical Search**: BM25 captures exact statutory numbers ("482", "318(2)", "173", "notice under section 35").
