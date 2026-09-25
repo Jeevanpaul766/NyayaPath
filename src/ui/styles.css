@@ -1,0 +1,163 @@
+/* NyayaPath — Custom Streamlit Styles */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Main container */
+.stApp {
+    background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+}
+
+/* Header styling */
+h1 {
+    color: #f0f6fc !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+h2, h3 {
+    color: #c9d1d9 !important;
+    font-weight: 600 !important;
+}
+
+/* Chat messages */
+.stChatMessage {
+    background: #161b2280 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* User message */
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
+    background: #1c2333 !important;
+    border-color: #388bfd40 !important;
+}
+
+/* Assistant message */
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
+    background: #13171f !important;
+    border-color: #30363d !important;
+}
+
+/* Chat input */
+.stChatInput > div {
+    border-radius: 12px !important;
+    border-color: #30363d !important;
+    background: #0d1117 !important;
+}
+
+.stChatInput textarea {
+    color: #c9d1d9 !important;
+}
+
+/* Buttons */
+.stButton > button {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Primary button */
+.stButton > button[kind="primary"] {
+    background: linear-gradient(135deg, #e94560 0%, #c23152 100%) !important;
+    border: none !important;
+    color: white !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #0d1117 !important;
+    border-right: 1px solid #21262d !important;
+}
+
+[data-testid="stSidebar"] .stMarkdown {
+    color: #8b949e !important;
+}
+
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #c9d1d9 !important;
+}
+
+/* Selectbox */
+.stSelectbox > div > div {
+    background: #161b22 !important;
+    border-color: #30363d !important;
+    border-radius: 8px !important;
+}
+
+/* Text input */
+.stTextInput > div > div {
+    background: #161b22 !important;
+    border-color: #30363d !important;
+    border-radius: 8px !important;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background: #161b22 !important;
+    border-radius: 8px !important;
+}
+
+/* Checkbox */
+.stCheckbox label {
+    color: #c9d1d9 !important;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-color: #e94560 !important;
+}
+
+/* Markdown content in assistant messages */
+.stChatMessage .stMarkdown p {
+    color: #c9d1d9 !important;
+    line-height: 1.7 !important;
+}
+
+.stChatMessage .stMarkdown h3 {
+    color: #58a6ff !important;
+    margin-top: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1rem !important;
+    border-bottom: 1px solid #21262d !important;
+    padding-bottom: 0.3rem !important;
+}
+
+.stChatMessage .stMarkdown ul, .stChatMessage .stMarkdown ol {
+    color: #c9d1d9 !important;
+}
+
+.stChatMessage .stMarkdown strong {
+    color: #f0f6fc !important;
+}
+
+.stChatMessage .stMarkdown code {
+    background: #1c2333 !important;
+    color: #79c0ff !important;
+    padding: 0.15rem 0.4rem !important;
+    border-radius: 4px !important;
+}
+
+/* Horizontal rule in messages */
+.stChatMessage .stMarkdown hr {
+    border-color: #21262d !important;
+    margin: 1rem 0 !important;
+}
+
+/* Info/warning boxes */
+.stAlert {
+    border-radius: 8px !important;
+}

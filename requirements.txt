@@ -1,0 +1,33 @@
+# NyayaPath — Ethical Legal Guidance Agent
+# Core Dependencies
+
+# LangGraph & LangChain
+langgraph>=0.2.20
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-ollama>=0.2.0
+
+# Search
+tavily-python>=0.5.0
+
+# Local Hybrid RAG (ChromaDB + BM25 + sentence-transformers)
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+rank-bm25>=0.2.2
+
+# UI & Web Application
+streamlit>=1.39.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+
+# Data Validation
+pydantic>=2.8.0
+
+# Environment
+python-dotenv>=1.0.1
+
+# Testing
+pytest>=8.3.0
+
+# Terminal Output
+rich>=13.8.0

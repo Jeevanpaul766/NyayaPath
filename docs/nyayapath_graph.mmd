@@ -1,0 +1,41 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([__start__]):::first
+	disclaimer_check(disclaimer_check)
+	crisis_detection(crisis_detection)
+	crisis_handler(crisis_handler)
+	input_safety_filter(input_safety_filter)
+	refusal_handler(refusal_handler)
+	classify_and_clarify(classify_and_clarify)
+	clarification(clarification)
+	search_public_sources(search_public_sources)
+	grade_and_retry(grade_and_retry)
+	synthesize_guidance(synthesize_guidance)
+	deterministic_output_check(deterministic_output_check)
+	format_final_response(format_final_response)
+	__end__([__end__]):::last
+	__start__ --> disclaimer_check;
+	classify_and_clarify -.-> clarification;
+	classify_and_clarify -.-> search_public_sources;
+	crisis_detection -.-> crisis_handler;
+	crisis_detection -.-> input_safety_filter;
+	crisis_handler --> format_final_response;
+	deterministic_output_check -.-> format_final_response;
+	deterministic_output_check -.-> synthesize_guidance;
+	disclaimer_check --> crisis_detection;
+	grade_and_retry -.-> search_public_sources;
+	grade_and_retry -.-> synthesize_guidance;
+	input_safety_filter -.-> classify_and_clarify;
+	input_safety_filter -.-> refusal_handler;
+	refusal_handler --> format_final_response;
+	search_public_sources --> grade_and_retry;
+	synthesize_guidance --> deterministic_output_check;
+	clarification --> __end__;
+	format_final_response --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
