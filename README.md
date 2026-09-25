@@ -78,6 +78,15 @@ NyayaPath is an agentic AI system that accepts a citizen's natural-language acco
 
 ---
 
+### 5. Official Print-Ready Legal Guidance Memorandum (PDF Export)
+*The citizen receives a formal, structured, print-ready A4 legal memorandum with unique Document ID, governing regime badge, verified statutory provisions, procedural checklists, and emergency legal aid directories.*
+
+![Official PDF Legal Guidance Memorandum](docs/screenshots/05_pdf_memorandum_showcase.png)
+
+> 📥 **Download Full Sample PDF:** [`docs/sample_memorandum.pdf`](docs/sample_memorandum.pdf) / [`docs/NyayaPath_Legal_Guidance_Memorandum_498A.pdf`](docs/NyayaPath_Legal_Guidance_Memorandum_498A.pdf)
+
+---
+
 ## 🏗️ System Architecture
 
 ```
